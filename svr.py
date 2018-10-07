@@ -33,3 +33,7 @@ plt.title('Truth or Bluff (SVR)')
 plt.xlabel('Position level')
 plt.ylabel('Salary')
 plt.show()
+
+# Predicting a new result
+y_pred = regressor.predict(sc_X.transform(np.array([[6.5]])))
+y_pred = sc_y.inverse_transform(y_pred)
